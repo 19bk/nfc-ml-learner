@@ -1,0 +1,56 @@
+✅ PROJECT MILESTONES
+✅ M1: Project Folder Setup
+Create base folders.
+
+bash
+Copy
+Edit
+mkdir -p /Users/bernard/dev/nfc-ml-learner/{data/audio,src/ml,src/app}
+cd /Users/bernard/dev/nfc-ml-learner
+✅ M2: Simulate NFC Lookup
+JSON map of NFC → word
+
+Python script to simulate "scanning" and output word
+
+Files:
+
+src/ml/nfc_word_map.json
+
+src/app/simulate_nfc.py
+
+✅ M3: Install TTS Dependencies
+Create Python venv and install required packages
+
+bash
+Copy
+Edit
+cd /Users/bernard/dev/nfc-ml-learner
+python3 -m venv venv
+source venv/bin/activate
+pip install pyttsx3
+
+✅ M4: Generate TTS Audio
+Script to generate .wav files using pyttsx3
+
+Save to data/audio/<word>.wav
+
+File:
+
+src/ml/generate_tts.py
+
+✅ M5: Integrate Audio Playback
+Play audio from /data/audio/word.wav using afplay
+
+Update:
+
+src/app/simulate_nfc.py calls audio after NFC ID is looked up.
+
+✅ M6: Add Spelling / Full Sentences
+Extend generate_tts.py to make "Lion. L I O N. Great job!"
+
+✅ M7: Voice Input (Optional)
+Add speech keyword detection using Picovoice
+
+✅ M8: Hardware NFC Integration (ESP32 or Pi)
+Once software works locally, port to real hardware
+

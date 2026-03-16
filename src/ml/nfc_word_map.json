@@ -1,6 +1,7 @@
 {
-    "04AABBCCDD": "Picovoice",
-    "04AABBCCEE": "elephant",
-    "04AABBCCFF": "apple"
-  }
-  
+    "nfc_001": "lion",
+    "nfc_002": "tiger",
+    "nfc_003": "elephant",
+    "nfc_004": "giraffe",
+    "nfc_005": "monkey"
+}

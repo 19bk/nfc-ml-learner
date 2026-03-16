@@ -1,12 +1,20 @@
 # NFC-ML-Learner
 
-An edge ML literacy device that pairs NFC-tagged physical objects with on-device keyword spotting and text-to-speech to teach children vocabulary -- no internet required.
+An offline edge ML vocabulary learning device for children in rural Kenya and refugee camp classrooms.
+
+This project uses on-device machine learning to recognize spoken words locally, without sending audio to the cloud. It is designed for low-connectivity learning environments where privacy, reliability, and low cost matter.
+
+![Demo](docs/demo.gif)
+
+## Why Edge ML
+
+The device processes speech on the hardware itself instead of relying on internet access or cloud APIs. That makes it practical for rural schools and refugee camp learning spaces where connectivity is unreliable and devices need to keep working offline.
 
 ## What It Does
 
-A child taps an NFC-tagged card (e.g., a picture of a lion) against the device. The system looks up the tag, speaks the word aloud, spells it letter by letter, and gives audio reinforcement ("Lion. L-I-O-N. Great job!"). The child can then **say the word back** -- the on-device keyword spotter detects it in real time and responds with positive feedback.
+A child taps an NFC-tagged card (e.g., a picture of a lion) against the device. The system looks up the tag, speaks the word aloud, spells it letter by letter, and gives audio reinforcement. The child can then **say the word back** -- the on-device keyword spotter detects it in real time and responds with positive feedback.
 
-The entire pipeline runs offline on low-cost hardware. Designed for underserved classrooms in East Africa where connectivity is unreliable and devices must be rugged, solar-powered, and cheap.
+The entire pipeline runs offline on low-cost hardware -- rugged, solar-powered, and cheap. Designed for early literacy support, small group practice, and bilingual content such as English and Kiswahili.
 
 ## Tech Stack
 
@@ -50,6 +58,13 @@ All inference happens locally. No cloud calls, no network dependency. The Porcup
 - **Extensible callback system** -- `KeywordSpotter.start_listening(callback=fn)` accepts any handler, decoupling detection from response logic
 - **Hardware-portable** -- architected for ESP32/Raspberry Pi deployment with solar power and SD-card content updates
 
+## Suggested Use Cases
+
+- English and Kiswahili word drills with reusable tagged cards
+- Community learning programmes that need offline, portable teaching aids
+- Refugee camp classrooms with limited or no internet access
+- Small group vocabulary practice with immediate spoken feedback
+
 ## Project Structure
 
 ```
@@ -88,6 +103,9 @@ python src/ml/keyword_spotting.py
 
 # Run the test harness
 python src/ml/test_keyword_spotting.py
+
+# Run the terminal demo (no hardware or API keys needed)
+python scripts/demo_simulate.py
 ```
 
 ## Current Vocabulary

@@ -1,20 +1,20 @@
 # NFC-ML-Learner
 
-An offline edge ML vocabulary learning device for children in rural Kenya and refugee camp classrooms.
+Offline edge ML vocabulary learning device for rural Kenya and refugee camp classrooms.
 
-This project uses on-device machine learning to recognize spoken words locally, without sending audio to the cloud. It is designed for low-connectivity learning environments where privacy, reliability, and low cost matter.
+This project helps children practice vocabulary with NFC tagged cards, offline speech recognition, and spoken feedback that runs on the device itself. It is built for classrooms where internet access is unreliable and the hardware needs to stay affordable, portable, and easy to use.
 
 ![Demo](docs/demo.gif)
 
 ## Why Edge ML
 
-The device processes speech on the hardware itself instead of relying on internet access or cloud APIs. That makes it practical for rural schools and refugee camp learning spaces where connectivity is unreliable and devices need to keep working offline.
+The device processes speech on the hardware itself instead of sending audio to the cloud. That makes it a better fit for schools and learning spaces where connectivity is limited and the system still needs to work every day.
 
 ## What It Does
 
-A child taps an NFC-tagged card (e.g., a picture of a lion) against the device. The system looks up the tag, speaks the word aloud, spells it letter by letter, and gives audio reinforcement. The child can then **say the word back** -- the on-device keyword spotter detects it in real time and responds with positive feedback.
+A child taps an NFC tagged card, for example a picture of a lion, against the device. The system looks up the tag, says the word aloud, spells it letter by letter, and gives audio reinforcement. The child can then **say the word back** and the on device keyword spotter listens for the correct answer in real time.
 
-The entire pipeline runs offline on low-cost hardware -- rugged, solar-powered, and cheap. Designed for early literacy support, small group practice, and bilingual content such as English and Kiswahili.
+The full pipeline runs offline on low cost hardware. It is designed for early literacy practice, small group learning, and bilingual content such as English and Kiswahili.
 
 ## Tech Stack
 
